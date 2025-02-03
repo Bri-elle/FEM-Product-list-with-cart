@@ -1,0 +1,129 @@
+/* // Header Styles */
+header h1 {
+	color: var(--Rose900);
+	padding: 0 0 1.5rem 0;
+}
+
+/* // Container Styles */
+#container {
+	position: relative;
+	width: 100%;
+}
+
+/* // MENU STYLES */
+.menu-item {
+	margin-bottom: 20px;
+}
+
+.menu-image {
+	width: 100%;
+	height: 100%;
+	border-radius: 0.3rem;
+}
+
+.details-menu {
+	font-size: var(--extra-small);
+}
+/* // ADD TO CART BUTTON STYLES */
+.add-to-cartBtn {
+	width: 50%;
+	height: 40px;
+	border-radius: 24px;
+	bottom: 59px;
+	left: 50%;
+	font-size: var(--small);
+}
+
+/* Cart Body Styles */
+.cart-total-text {
+	font-size: var(--small);
+}
+.cart-total-cost {
+	font-size: var(--large);
+}
+
+.delivery-type-text {
+	font-size: var(--extra-small);
+}
+
+/* //Final Order Styles */
+.confirmation-overlay {
+	top: 0;
+	left: 0;
+}
+.confirmed-order {
+	width: 100%;
+	margin-top: 80px;
+}
+
+.confirmed-list-header h2 {
+	font-size: var(--extra-large);
+}
+
+.listItemName {
+	font-size: var(--medium);
+	
+}
+
+.listItemTotal {
+	font-size: var(--medium);
+	
+}
+.final-order-footer {
+	font-size: var(--small);
+}
+
+.final-order-footer p:nth-child(2) {
+	font-size: var(--large);	
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	header h1 {
+		width: 85%;
+		margin: 0 auto;
+	}
+	#container {
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	.menu-image img {
+		object-fit: cover;
+		width: 100%;
+		border-radius: 0.5rem;
+	}
+
+	.add-to-cartBtn {
+		bottom: 57px;
+		height: 60px;
+		align-content: center;
+		border-radius: 28px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	#container {
+		display: flex;
+		width: 100%;
+	}
+	.menu-wrapper {
+		width: 70%;
+	}
+	#menuContainer {
+		display: flex;
+	}
+	#menuContainer article {
+		border: 2px solid;
+	}
+	#cart {
+		width: 30%;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

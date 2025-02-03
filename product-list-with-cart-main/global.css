@@ -1,0 +1,397 @@
+:root {
+	--red: hsl(14, 86%, 42%);
+	--green: hsl(159, 69%, 38%);
+	--Rose50: hsl(20, 50%, 98%);
+	--Rose100: hsl(13, 31%, 94%);
+	--Rose300: hsl(14, 25%, 72%);
+	--Rose400: hsl(7, 20%, 60%);
+	--Rose500: hsl(12, 20%, 44%);
+	--Rose900: hsl(14, 65%, 9%);
+	--white: white;
+
+	/* @link https://utopia.fyi/clamp/calculator?a=320,1440,16—48 */
+	--extra-small: clamp(0.875rem, 0.6964rem + 0.8929vw, 1.5rem);
+	--small: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+	--medium: clamp(1.125rem, 0.8036rem + 1.6071vw, 2.25rem);
+	--large: clamp(1.5rem, 1.1786rem + 1.6071vw, 2.625rem);
+	--extra-large: clamp(2.625rem, 2.4464rem + 0.8929vw, 3.25rem);
+
+	/* Desktop Fonts */
+	--desktop-small: 0.875rem;
+	--desktop-medium: 1rem;
+	--desktop-large: 1.2rem;
+}
+
+/*
+===========
+BACKGROUND/IMAGES
+===========
+*/
+
+body {
+	/* background-color: var(--Rose100); */
+	background-color: #fcf8f6;
+}
+#cart {
+	background-color: #fff;
+}
+/*
+  ===========
+  LAYOUT
+  ===========
+  */
+/*CSS Reset*/
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	position: relative;
+	line-height: 1.5;
+	padding: 1.5rem;
+	width: 100%;
+	min-height: 100%;
+	font-family: "Red Hat Text", serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+html {
+	height: 100%;
+}
+/* // Header Styles */
+header h1 {
+	color: var(--Rose900);
+	padding: 0 0 1.5rem 0;
+}
+
+/* // Container Styles */
+#container {
+	position: relative;
+}
+
+/* // MENU STYLES */
+
+/* // MENU STYLES */
+.menu-item {
+	position: relative;
+}
+.menu-item picture {
+	border-radius: 0.5rem;
+}
+.menu-image img {
+	object-fit: cover;
+	border-radius: 0.5rem;
+}
+
+.title-menu {
+	color: var(--Rose900);
+	font-weight: 600;
+}
+
+.details-menu {
+	margin: 1.5rem 0 0.2rem 0;
+	color: var(--Rose400);
+}
+
+.price-menu {
+	color: var(--red);
+	font-weight: 500;
+}
+.price-menu::before {
+	content: "$";
+}
+
+/* // ADD TO CART BUTTON STYLES */
+.add-to-cartBtn {
+	outline: none;
+	border: 1px solid var(--Rose400);
+	background-color: white;
+	color: var(--Rose900);
+	border-radius: 24px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	column-gap: 5px;
+	justify-content: center;
+	box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
+}
+
+.addToCartSVG {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+}
+/* Increment Button Styles */
+.increment {
+	right: 7%;
+}
+
+/* Decrement Button Styles */
+.decrement {
+	left: 7%;
+}
+
+.increment,
+.decrement {
+	display: inline;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 1px solid white;
+	padding: 4px;
+	border-radius: 50%;
+}
+
+#cart {
+	width: 100%;
+	padding: 2rem;
+	margin-top: 50px;
+	border-radius: 8px;
+}
+/* // CART STYLES*/
+/* Cart Header Styles */
+.cart-header {
+	color: var(--red);
+	margin-top: -1rem;
+	font-size: 1rem;
+}
+
+.cart-header img {
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.directionText {
+	text-align: center;
+	color: var(--Rose900);
+}
+
+/* Cart Body Styles */
+.cart-body {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.cart-item {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 0.5px solid var(--Rose300);
+}
+
+.cart-item-name {
+	color: var(--Rose900);
+	font-weight: 600;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+.cart-item-details {
+	margin-bottom: 1rem;
+}
+
+.item-counter {
+	color: var(--red);
+	font-weight: 700;
+	margin-right: 0.5rem;
+}
+
+.cart-item-price {
+	color: var(--Rose400);
+	margin-right: 10px;
+}
+.cart-item-price::before {
+	content: "@ $";
+}
+.item-total {
+	color: var(--Rose500);
+}
+.item-total::before {
+	content: "$";
+}
+.button-wrapper {
+	width: 21px;
+	height: 21px;
+	border: 1px solid var(--Rose400);
+	border-radius: 50%;
+	align-self: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* Cart Footer Styles */
+.cart-total-wrapper {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+}
+.cart-total-text {
+	align-content: center;
+}
+.cart-total-cost {
+	font-weight: 700;
+}
+
+.cart-total-cost::before {
+	content: "$";
+}
+
+.confirmOrderBtn {
+	width: 100%;
+	outline: none;
+	border: none;
+	background-color: var(--red);
+	color: var(--Rose50);
+	border-radius: 20px;
+	height: 44px;
+	margin-top: 2rem;
+
+	box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
+}
+
+.delivery-type-text {
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem;
+	background-color: var(--Rose100);
+	border-radius: 8px;
+}
+
+/* //Final Order Styles */
+.confirmation-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+}
+
+.confirmed-order {
+	background: white;
+	margin-top: 80px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	z-index: 11;
+	padding: 1.5rem;
+}
+
+.order-wrapper {
+	background-color: var(--Rose100);
+	border-radius: 8px;
+	margin-top: 2rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.confirmed-list-header {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+.confirmed-list-header img {
+	width: 48px;
+}
+
+.list-item {
+	padding: 1rem 1rem 0 1rem;
+}
+.list-item-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 0.5px solid var(--Rose300);
+	padding-bottom: 1rem;
+}
+
+.list-item img {
+	border-radius: 8px;
+	margin-right: 20px;
+	width: 30px;
+	height: 40px;
+	object-fit: cover;
+	flex: 1;
+}
+.list-item div:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	flex: 2;
+}
+.list-item img {
+}
+.listItemName {
+	font-weight: 500;
+	color: var(--Rose900);
+}
+
+.listItemCount {
+	color: var(--red);
+	font-weight: 600;
+	margin-right: 20px;
+}
+
+.listItemPrice {
+	color: var(--Rose500);
+}
+
+.listItemPrice::before {
+	content: "@ $";
+}
+.listItemTotal {
+	font-size: var(--medium);
+	font-weight: 600;
+	color: var(--Rose900);
+	flex: 1;
+	text-align: right;
+}
+.listItemTotal::before {
+	content: "$";
+}
+
+.final-order-footer {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	padding: 1rem;
+	font-weight: 500;
+}
+
+.final-order-footer p:nth-child(2) {
+	font-weight: 600;
+	color: var(--Rose900);
+}
+
+.start-new-orderBtn {
+	width: 100%;
+	outline: none;
+	border: none;
+	background-color: var(--red);
+	color: var(--Rose50);
+	border-radius: 20px;
+	height: 44px;
+	margin-top: 2rem;
+	box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
+}
+
+/* || Button Styles */
+.confirmOrderBtn:hover,
+.start-new-orderBtn:hover {
+	background-color: #962c0c;
+}
